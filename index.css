@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.picture .Pic img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.infoSection{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    /* background-color: burlywood; */
+    height: 100vh;
+
+}
+.userName{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 55px;
+}
+.Time{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.mill{
+    margin-top: 10px;
+}
+.picture{
+    flex:1;
+    text-align: center;
+    height: 100vh;
+}
+.Track{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 20px;
+}
+.picture .Pic{
+      margin-top: 80px;
+}
+.Git_URL{
+    text-align: center;
+    margin-top: 20px;
+}
