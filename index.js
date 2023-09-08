@@ -1,16 +1,20 @@
 let todayDate = document.getElementById("date")
-let daysofWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let millisecTime = document.getElementById("milliseconds")
 
+function dayOftheWeek() {
+    let daysofWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let newdate = new Date();
+    let updateDay = daysofWeek[newdate.getUTCDay()];
+    todayDate.innerHTML = `${updateDay}`;
+     // todayDate.innerHTML = updateDay;
+    //to get today date ends here//
+}
 //to get today date start here//
-let newdate = new Date();
-let updateDay = newdate.getUTCDay();
-todayDate.innerHTML = `${daysofWeek[updateDay]}`;
-//to get today date ends here//
+dayOftheWeek();
 
-setInterval(() =>{
+setInterval(() => {
     millisecTime.innerHTML = Date.now();
-},100);
+}, 100);
 
 
 
