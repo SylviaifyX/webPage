@@ -5,7 +5,7 @@ let millisecTime = document.getElementById("milliseconds")
 //to get today date start here//
 let newdate = new Date();
 let updateDay = newdate.getUTCDay();
-todayDate.innerHTML = `Today is: ${daysofWeek[updateDay]}`;
+todayDate.innerHTML = `${daysofWeek[updateDay]}`;
 // todayDate.innerHTML = (daysofWeek[updateDay]);
 // console.log(todayDate);
 // console.log(updateDay);
@@ -14,11 +14,17 @@ todayDate.innerHTML = `Today is: ${daysofWeek[updateDay]}`;
 
 
 /* to get MilliSeconds*/
-setInterval(() => {
-    let MilliDate = new Date();
-    let newMill = MilliDate.getUTCMilliseconds();
 
+setInterval(() => {
+    let MilliDate =  new Date();
+    let newMill = MilliDate.getTime();
     millisecTime.innerHTML = newMill;
     // console.log(millisecTime)
-},100);
+},);
+
+// setInterval(() =>{
+//     millisecTime.innerHTML = Date.now();
+//     console.log(millisecTime)
+// },100);
+
 /* to get MilliSeconds ends*/
