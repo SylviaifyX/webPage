@@ -4,20 +4,21 @@ let millisecTime = document.getElementById("milliseconds")
 
 //to get today date start here//
 let newdate = new Date();
-let updateDay = newdate.getDay();
+let updateDay = newdate.getUTCDay();
 todayDate.innerHTML = `Today is: ${daysofWeek[updateDay]}`;
 // todayDate.innerHTML = (daysofWeek[updateDay]);
 // console.log(todayDate);
 // console.log(updateDay);
+
 //to get today date ends here//
 
+
 /* to get MilliSeconds*/
-
-
 setInterval(() => {
     let MilliDate = new Date();
     let newMill = MilliDate.getUTCMilliseconds();
 
     millisecTime.innerHTML = newMill;
     // console.log(millisecTime)
-},1000);
+},100);
+/* to get MilliSeconds ends*/
